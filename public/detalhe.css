@@ -1,0 +1,68 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffe0f0, #ffd6e8, #f8c8dc);
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  /* CENTRALIZA CONTEÚDO */
+  h1 {
+    text-align: center;
+    color: #b84d86;
+    margin-top: 40px;
+  }
+  
+  /* CARD PRINCIPAL */
+  h2 {
+    text-align: center;
+    color: #b84d86;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* CAIXA DOS DETALHES */
+  body > h2,
+  body > p {
+    max-width: 600px;
+    margin: 10px auto;
+  }
+  
+  /* TRANSFORMA EM CARD */
+  body > h2,
+  body > p {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+  
+  /* STATUS */
+  strong {
+    color: #b84d86;
+  }
+  
+  /* LINK VOLTAR */
+  a {
+    display: block;
+    text-align: center;
+    margin: 30px auto;
+    width: fit-content;
+    padding: 10px 15px;
+    background: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #b84d86;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.2s;
+  }
+  
+  a:hover {
+    transform: scale(1.05);
+  }

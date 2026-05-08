@@ -24,3 +24,137 @@ export async function criar(req: Request, res: Response) {
     res.status(201).json({ sucesso: true, dados: nova });
   } catch { res.status(500).json({ sucesso: false, erro: 'Erro interno' }); }
 }
+
+export async function buscarPorId(req: Request, res: Response) {
+
+  try {
+    const id = Number(req.params.id);
+    const tarefa = await TarefaModel.buscarPorId(id);
+    if (!tarefa) {
+      res.status(404).json({
+        sucesso: false,
+        erro: "Tarefa não encontrada"
+      });
+      return;
+    }
+    res.json({
+      sucesso: true,
+      dados: tarefa
+    });
+  } catch {
+    res.status(500).json({
+      sucesso: false,
+      erro: "Erro interno"
+    });
+  }
+}
+
+
+export async function atualizar(req: Request, res: Response) {
+  try {
+    const id = Number(req.params.id);
+    const tarefaAtualizada =
+      await TarefaModel.atualizar(id, req.body);
+    if (!tarefaAtualizada) {
+      res.status(404).json({
+        sucesso: false,
+        erro: "Tarefa não encontrada"
+      });
+      return;
+    }
+    res.json({
+      sucesso: true,
+      dados: tarefaAtualizada
+    });
+  } catch {
+    res.status(500).json({
+      sucesso: false,
+      erro: "Erro interno"
+    });
+  }
+}
+
+export async function remover(req: Request, res: Response) {
+  try {
+    const id = Number(req.params.id);
+    const removida =
+      await TarefaModel.remover(id);
+    if (!removida) {
+      res.status(404).json({
+        sucesso: false,
+        erro: "Tarefa não encontrada"
+      });
+      return;
+    }
+
+    res.status(204).send();
+  } catch {
+    res.status(500).json({
+      sucesso: false,
+      erro: "Erro interno"
+    });
+
+  }
+}
+
+export async function listarPagina(req: Request, res: Response) {
+  try {
+    const tarefas =
+      await TarefaModel.listarTodas();
+    res.render("tarefas", { tarefas });
+  } catch {
+    res.render("erro", {
+      mensagem: "Erro ao carregar tarefas"
+    });
+  }
+}
+
+export async function detalhePagina(req: Request, res: Response) {
+  const id = Number(req.params.id);
+  const tarefa =
+    await TarefaModel.buscarPorId(id);
+  if (!tarefa) {
+    res.render("erro", {
+      mensagem: "Tarefa não encontrada"
+    });
+    return;
+  }
+  res.render("detalhe", { tarefa });
+}
+
+export async function cadastrarPagina(req: Request, res: Response) {
+  res.render("cadastrar");
+}
+
+export async function cadastrarForm(req: Request, res: Response) {
+  const { titulo, descricao, prioridade } =
+    req.body;
+  await TarefaModel.criar({
+    titulo,
+    descricao,
+    prioridade
+  });
+  res.redirect("/pagina/tarefas");
+}
+
+export async function concluirForm(req: Request, res: Response) {
+  const id = Number(req.params.id);
+  const tarefa =
+    await TarefaModel.buscarPorId(id);
+  if (!tarefa) {
+    res.render("erro", {
+      mensagem: "Tarefa não encontrada"
+    });
+    return;
+  }
+  await TarefaModel.atualizar(id, {
+    concluida: !tarefa.concluida
+  });
+  res.redirect("/pagina/tarefas");
+}
+
+export async function excluirForm(req: Request, res: Response) {
+  const id = Number(req.params.id);
+  await TarefaModel.remover(id);
+  res.redirect("/pagina/tarefas");
+}

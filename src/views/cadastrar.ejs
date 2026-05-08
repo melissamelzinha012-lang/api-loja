@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nova Tarefa</title>
+  <link rel="stylesheet" href="/cadastrar.css">
+</head>
+
+<body>
+
+  <h1>Cadastrar Tarefa</h1>
+
+  <form
+    method="POST"
+    action="/tarefas/cadastrar">
+
+    <div>
+
+      <label>
+        Título
+      </label>
+
+      <br>
+
+      <input
+        type="text"
+        name="titulo"
+        required>
+
+    </div>
+
+    <br>
+
+    <div>
+
+      <label>
+        Descrição
+      </label>
+
+      <br>
+
+      <textarea
+        name="descricao">
+      </textarea>
+
+    </div>
+
+    <br>
+
+    <div>
+
+      <label>
+        Prioridade
+      </label>
+
+      <br>
+
+      <select name="prioridade">
+
+        <option value="alta">
+          Alta
+        </option>
+
+        <option value="media">
+          Média
+        </option>
+
+        <option value="baixa">
+          Baixa
+        </option>
+
+      </select>
+
+    </div>
+
+    <br>
+
+    <button type="submit">
+      Cadastrar
+    </button>
+
+  </form>
+
+  <br>
+
+  <a href="/pagina/tarefas">
+    Voltar
+  </a>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe0f0, #ffd6e8, #f8c8dc);
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px;
+    color: #333;
+  }
+  
+  /* CENTRALIZA CONTEÚDO */
+  h1 {
+    text-align: center;
+    color: #b84d86;
+    margin-bottom: 30px;
+  }
+  
+  /* FORMULÁRIO */
+  form {
+    max-width: 500px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    backdrop-filter: blur(6px);
+  }
+  
+  /* LABEL */
+  label {
+    font-weight: bold;
+    color: #b84d86;
+  }
+  
+  /* INPUTS */
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ffd1e6;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+  }
+  
+  input:focus, textarea:focus, select:focus {
+    border-color: #ff5fa2;
+    box-shadow: 0 0 8px rgba(255, 95, 162, 0.3);
+  }
+  
+  /* BOTÃO */
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ff8fc7, #ff5fa2);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.03);
+  }
+  
+  /* LINK VOLTAR */
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #b84d86;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #ff4fa3;
+  }

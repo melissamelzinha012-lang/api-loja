@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe0f0, #ffd6e8, #f8c8dc);
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  /* CONTAINER CENTRAL */
+  .container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  /* TÍTULO */
+  h1 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 30px;
+    color: #b84d86;
+  }
+  
+  /* LINKS */
+  a {
+    color: #b84d86;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+  
+  a:hover {
+    color: #ff4fa3;
+  }
+  
+  /* CARD (TAREFAS) */
+  .card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-left: 6px solid #ff8fc7;
+    transition: 0.25s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  }
+  
+  /* BOTÕES */
+  button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff8fc7, #ff5fa2);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* INPUTS */
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 12px 0;
+    border-radius: 10px;
+    border: 1px solid #ffd1e6;
+    outline: none;
+    transition: 0.2s;
+  }
+  
+  input:focus, textarea:focus, select:focus {
+    border-color: #ff5fa2;
+    box-shadow: 0 0 8px rgba(255, 95, 162, 0.25);
+  }
+  
+  /* BOTÃO DE LINK (EX: NOVA TAREFA) */
+  a.button-link {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }

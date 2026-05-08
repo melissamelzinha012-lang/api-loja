@@ -20,5 +20,5 @@ app.use(tarefaRoutes);
 
 // Iniciar
 app.listen(3000, () => {
-  console.log("✅ API Tarefas rodando em http://localhost:3000");
+ console.log(" API Tarefas rodando em http://localhost:3000");
 });

@@ -1,0 +1,95 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffe0f0, #ffd6e8, #f8c8dc);
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  /* TÍTULO */
+  h1 {
+    text-align: center;
+    color: #b84d86;
+    margin: 30px 0;
+    font-size: 34px;
+  }
+  
+  /* LINK NOVA TAREFA */
+  a {
+    display: inline-block;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 10px;
+    color: #b84d86;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.2s;
+  }
+  
+  a:hover {
+    transform: scale(1.05);
+  }
+  
+  /* CONTAINER DAS TAREFAS */
+  body > div {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+  }
+  
+  /* CARD DAS TAREFAS */
+  div > div {
+    background: rgba(255, 255, 255, 0.95);
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.2s;
+    border-left: 6px solid #ff8fc7;
+  }
+  
+  div > div:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* TEXTOS */
+  h3 {
+    color: #b84d86;
+    margin-bottom: 8px;
+  }
+  
+  p {
+    margin: 6px 0;
+  }
+  
+  /* BOTÕES */
+  button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff8fc7, #ff5fa2);
+    color: white;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* LINHA DE SEPARAÇÃO */
+  hr {
+    border: none;
+    height: 1px;
+    background: #ffd1e6;
+    margin: 20px 0;
+  }
+  
+  /* STATUS MAIS BONITO */
+  p strong {
+    color: #b84d86;
+  }
